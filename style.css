@@ -1,0 +1,77 @@
+body {
+    background-color: #2d322f;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.bg {
+    background-color: #2d322f;
+}
+
+.tableTh {
+    background-color: #616a64;
+}
+
+.pile-input {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    margin-bottom: 2rem;
+}
+
+.pile-input .piler {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    width: 100%;
+}
+
+.pile-input .piler input[type="number"] {
+    background-color: #707b74 !important;
+    color: #fff;
+}
+
+.table tbody tr:hover {
+    background-color: #616a64 !important;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #424845 !important;
+}
+
+.table tbody tr:nth-child(even):hover {
+    background-color: #616a64 !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+@media screen and (max-width: 1080px) {
+    .pile-input {
+        width: 100%;
+    }
+
+    .pile-input .piler {
+        flex-wrap: wrap;
+    }
+}
+
+.stirrupTable {
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.stirrupTable thead tr:nth-child(2) th {
+    writing-mode: vertical-rl;
+    text-align: center;
+    transform: rotate(180deg);
+}

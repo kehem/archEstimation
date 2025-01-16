@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arch Estimation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/surajit-singha-sisir/mastorsCDN@v1.1.01/mastors.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/gh/surajit-singha-sisir/mastorsCDN@v1.1.01/mastors.js"></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/surajit-singha-sisir/mastorsCDN@v1.1/mastorsIcons/mastorsIcons.css" />
+
+    <script type="module" src="script.js"></script>
+
+</head>
+
+<body>
+    <h1>PILE ESTIMATION</h1>
+    <div class="pile-input">
+        <div class="piler">
+            <input type="number" class="textbox" name="pileBar" id="pileBar" placeholder="Bar(mm)" required>
+            <input type="number" class="textbox" name="pileQty" id="pileQty" placeholder="Quantity" required>
+            <input type="number" class="textbox" name="pileRod" id="pileRod" placeholder="Rod" required>
+            <input type="number" class="textbox" name="pileLength" id="pileLength" placeholder="Length" required>
+        </div>
+        <input type="submit" value="Submit" id="pileSubmit" class="btn btn-primary w--100">
+    </div>
+    <br>
+    <!-- PILE TABLE -->
+    <table class="table pileTable">
+        <thead>
+            <tr>
+                <th class="tableTh" colspan="9">PILE ESTIMATION</th>
+            </tr>
+            <tr>
+                <th>Column</th>
+                <th>Bar (mm)</th>
+                <th>Quantity</th>
+                <th>Rod</th>
+                <th>Length</th>
+                <th>Total Rod Length</th>
+                <th>Unit Weight of Bars</th>
+                <th>Total Weight(kg)</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="pileSubTotalTr">
+                <td colspan="7" class="text-right">Sub Total</td>
+                <td colspan="2" class="pileSubTotal"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <!-- STIRRUP TABLE -->
+
+    <table class="table stirrupTable">
+        <thead>
+            <tr>
+                <th class="tableTh" colspan="16">STIRRUP ESTIMATION</th>
+            </tr>
+            <tr>
+                <th>Column</th>
+                <th>Pile Quantity</th>
+                <th>Bar (mm)</th>
+                <th>Radius</th>
+                <th>Area</th>
+                <th>Extra Rod</th>
+                <th>Total Running Length</th>
+                <th>X2-X2 Length</th>
+                <th>X2-X2 Dedumption</th>
+                <th>X2-X2 Quantity</th>
+                <th>X1-X1 Length</th>
+                <th>X1-X1 Dedumption</th>
+                <th>X1-X1 Quantity</th>
+                <th>Total Rings</th>
+                <th>W</th>
+                <th>V</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr class="column-1">
+                <td>Col-1</td>
+                <td>2</td>
+                <td class="stBarInput" contenteditable="true"></td>
+                <td class="stRadiusInput" contenteditable="true"></td>
+                <td>6</td>
+                <td class="stExtraRodInput" contenteditable="true"></td>
+                <td>6</td>
+                <td class="stX2Length" contenteditable="true"></td>
+                <td class="stX2Dedumption" contenteditable="true"></td>
+                <td>6</td>
+                <td class="stX1Length" contenteditable="true"></td>
+                <td class="stX1Dedumption" contenteditable="true"></td>
+                <td>6</td>
+                <td>6</td>
+                <td>6</td>
+                <td>6</td>
+            </tr> -->
+            <tr class="stirrupSubTotalTr">
+                <td colspan="14" class="text-right">Sub Total</td>
+                <td class="stirrupWSubTotal"></td>
+                <td class="stirrupVSubTotal"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- R.C.C CALCULATION -->
+    <h1>R.C.C CALCULATION</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Unit</th>
+                <th>Total Dry Volumn</th>
+                <th>Total Wet Volumn</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CFT</td>
+                <td class="DVCFT"></td>
+                <td class="WVCFT"></td>
+            </tr>
+            <tr>
+                <td>CM</td>
+                <td class="DVCM"></td>
+                <td class="WVCM"></td>
+            </tr>
+        </tbody>
+
+    </table>
+    <br><br>
+    <table class="table rccCalculation">
+        <thead>
+            <tr>
+                <td colspan="5" style="font-size: 2rem; padding: 1rem; background-color: #3b494b;">Manual Casting</td>
+            </tr>
+            <tr>
+                <th>Metarials Description</th>
+                <th>Ratio</th>
+                <th>Volume(CFT)</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cement (550 Taka)</td>
+                <td class="contenteditable cement" contenteditable="True">1</td>
+                <td></td>
+                <td></td>
+                <td class="totalPrices"></td>
+            </tr>
+            <tr>
+                <td>Sand (60 Taka)</td>
+                <td class="contenteditable sand" contenteditable="True">1</td>
+                <td></td>
+                <td></td>
+                <td class="totalPrices"></td>
+            </tr>
+            <tr>
+                <td>Stone (230 Taka)</td>
+                <td class="contenteditable stone" contenteditable="True" rowspan="2">1</td>
+                <td></td>
+                <td></td>
+                <td class="totalPrices"></td>
+            </tr>
+            <tr>
+                <td>Brick (12 Taka)</td>
+                <td class="contenteditable brick hide" contenteditable="True" rowspan="2">1</td>
+                <td></td>
+                <td></td>
+                <td class="totalPrices"></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="text-right subtotal">Sub Total</td>
+                <td></td>
+            </tr>
+        </tbody>
+
+    </table>
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+
+</body>
+
+</html>
